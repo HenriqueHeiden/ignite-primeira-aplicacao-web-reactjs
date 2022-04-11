@@ -13,7 +13,7 @@ createServer({
       transactions: [
         {
           id: 1,
-          title: 'Frelancer de web site',
+          title: 'Freelancer de web site',
           type: 'deposit',
           category: 'dev',
           amount: 6000,
@@ -37,8 +37,7 @@ createServer({
       return this.schema.all('transaction')
     })
 
-    this.post('transactions', (schema, request) => {
-      debugger;
+    this.post('transactions', (schema, request) => {      
       const data = JSON.parse(request.requestBody)
 
       return schema.create('transaction', data)
